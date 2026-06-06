@@ -27,7 +27,7 @@ export async function submitContactForm(
   try {
     await resend.emails.send({
       from: 'Website <onboarding@resend.dev>',
-      to: 'info@andypullingengineering.co.uk',
+      to: 'enquiries@whal.co.uk',
       replyTo: email,
       subject: `New enquiry from ${name}${company ? ` (${company})` : ''} — ${subject || 'General enquiry'}`,
       html: `
@@ -45,6 +45,6 @@ export async function submitContactForm(
 
     return { status: 'success', message: "Thanks — we'll be in touch shortly." };
   } catch {
-    return { status: 'error', message: 'Something went wrong. Please call us on 01775 841070.' };
+    return { status: 'error', message: 'Something went wrong. Please call us on 01406 362585.' };
   }
 }

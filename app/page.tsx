@@ -1,223 +1,183 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import PlaceholderImage from '@/components/PlaceholderImage';
 
-const services = [
-  {
-    title: 'Belt Conveyors',
-    desc: 'Custom-built belt, wire belt and Intralox conveyors for food production lines.',
-    href: '/services/conveyors',
-    icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Elevators',
-    desc: 'Bucket and belt elevators designed for gentle product handling at height.',
-    href: '/services/conveyors',
-    icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Tanks & Bins',
-    desc: 'Food-grade stainless steel tanks, bins, troughs and dip tanks to specification.',
-    href: '/services/fabrications',
-    icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Washers & Tables',
-    desc: 'Produce washers, basket washers and static or rotary grading tables.',
-    href: '/services/fabrications',
-    icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Platforms & Stairs',
-    desc: 'Access platforms, stairs, racking and fire escapes fabricated to order.',
-    href: '/services/fabrications',
-    icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 21h18M3 10h18M3 7l9-4 9 4M4 10v11M20 10v11M8 14v3m4-5v5m4-8v8" />
-      </svg>
-    ),
-  },
-  {
-    title: 'CAD Design',
-    desc: 'Full CAD design service — individual pieces or complete production area layouts.',
-    href: '/about',
-    icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
-      </svg>
-    ),
-  },
-];
+export const metadata: Metadata = {
+  title: 'Flat Roofing & Mastic Asphalt Specialists | Wrights & Holbeach Asphalt',
+  description:
+    'Wrights & Holbeach Asphalt Ltd — flat roofing and mastic asphalt specialists since 1959. Serving Lincolnshire, Cambridgeshire and Norfolk. Domestic, commercial and industrial.',
+};
 
-const stats = [
-  { value: '40+', label: 'Years experience' },
-  { value: '7', label: 'Days a week on call' },
-  { value: '1982', label: 'Trading since' },
-  { value: '100%', label: 'Custom built' },
-];
-
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-slate-800 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-700 pointer-events-none" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+      <section className="bg-stone-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-6">
-              <span className="w-2 h-2 bg-teal-400 rounded-full animate-pulse" />
-              <span className="text-slate-300 text-sm font-medium">Specialists to the Food Processing Industry</span>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-black text-white leading-tight mb-6">
-              Custom Stainless Steel{' '}
-              <span className="text-teal-400">Conveyors & Fabrications</span>
-            </h1>
-            <p className="text-slate-300 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
-              Individually designed and constructed equipment for the food, horticultural and materials handling industries.
-              Based in Lincolnshire. Engineers on call 7 days a week.
+            <p className="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-4">
+              Established 1959 · Four Generations
             </p>
-            <div className="flex flex-wrap gap-4">
+            <h1 className="text-4xl md:text-6xl font-black text-white leading-tight mb-6">
+              Flat Roofing &<br />
+              <span className="text-amber-400">Mastic Asphalt</span><br />
+              Specialists
+            </h1>
+            <p className="text-stone-300 text-lg leading-relaxed mb-8 max-w-2xl">
+              Family-run since 1959, we&apos;re the only mastic asphalt specialists within a 60-mile radius. From domestic flat roofs to large-scale commercial and industrial projects across Lincolnshire, Cambridgeshire and Norfolk.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/contact"
-                className="bg-teal-500 hover:bg-teal-400 text-white font-bold px-8 py-3 rounded-lg transition-colors text-sm"
+                className="bg-amber-500 hover:bg-amber-400 text-stone-900 font-bold px-8 py-4 rounded-lg transition-colors text-center"
               >
                 Get a Free Quote
               </Link>
               <Link
-                href="/gallery"
-                className="border border-white/30 hover:border-white text-slate-300 hover:text-white font-medium px-8 py-3 rounded-lg transition-colors text-sm"
+                href="/services/flat-roofing"
+                className="border border-stone-500 hover:border-amber-400 text-stone-300 hover:text-amber-400 font-semibold px-8 py-4 rounded-lg transition-colors text-center"
               >
-                View Our Work
+                Our Services
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="bg-gray-900 border-y border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((s) => (
-              <div key={s.label} className="text-center">
-                <div className="text-3xl font-black text-teal-400 mb-1">{s.value}</div>
-                <div className="text-gray-400 text-sm">{s.label}</div>
+      {/* Stats bar */}
+      <section className="bg-stone-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            {[
+              ['65+', 'Years in business'],
+              ['4', 'Generations of expertise'],
+              ['1959', 'Established'],
+              ['60mi', 'Nearest mastic asphalt specialist'],
+            ].map(([stat, label]) => (
+              <div key={label}>
+                <div className="text-amber-400 text-3xl font-black">{stat}</div>
+                <div className="text-stone-400 text-xs mt-1 leading-tight">{label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Services */}
+      {/* Services grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-3">What We Build</h2>
+          <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">What We Do</h2>
           <p className="text-gray-500 max-w-xl mx-auto">
-            All equipment is purpose-built to your exact requirements in food-grade stainless steel.
+            High quality flat roofing solutions for every application — from a domestic extension to an architect-specified industrial roof.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((s) => (
+        <div className="grid md:grid-cols-3 gap-6">
+          {[
+            {
+              href: '/services/flat-roofing',
+              title: 'Flat Roofing',
+              desc: 'New flat roofs, replacements and repairs for domestic and commercial properties. Long-lasting, professionally installed.',
+            },
+            {
+              href: '/services/mastic-asphalt',
+              title: 'Mastic Asphalt',
+              desc: 'Specialist mastic asphalt for roofs, balconies, damp proof flooring and tanking. The only specialists within 60 miles.',
+            },
+            {
+              href: '/services/commercial',
+              title: 'Commercial & Industrial',
+              desc: 'Architect-specified schemes for housing associations, local authorities, schools, hospitals and industrial premises.',
+            },
+          ].map((s) => (
             <Link
-              key={s.title}
+              key={s.href}
               href={s.href}
-              className="group bg-white border border-gray-200 hover:border-teal-400 rounded-xl p-6 transition-all hover:-translate-y-1 hover:shadow-md"
+              className="group border border-gray-200 rounded-xl p-6 hover:border-amber-400 transition-colors"
             >
-              <div className="text-teal-600 mb-4">{s.icon}</div>
-              <h3 className="text-gray-900 font-bold text-lg mb-2 group-hover:text-teal-600 transition-colors">
-                {s.title}
-              </h3>
+              <div className="w-8 h-1 bg-amber-500 rounded mb-4 group-hover:w-12 transition-all" />
+              <h3 className="font-black text-gray-900 text-lg mb-2">{s.title}</h3>
               <p className="text-gray-500 text-sm leading-relaxed">{s.desc}</p>
+              <div className="mt-4 text-amber-500 text-sm font-semibold">Learn more →</div>
             </Link>
           ))}
         </div>
       </section>
 
       {/* Gallery preview */}
-      <section className="bg-gray-50 py-20 px-4 sm:px-6 lg:px-8 border-y border-gray-200">
+      <section className="bg-gray-50 border-y border-gray-200 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-end justify-between mb-8">
             <div>
-              <h2 className="text-3xl font-black text-gray-900 mb-2">Recent Work</h2>
-              <p className="text-gray-500 text-sm">A sample of our fabrications and installations</p>
+              <h2 className="text-3xl font-black text-gray-900">Recent Projects</h2>
+              <p className="text-gray-500 mt-1">Work completed across Lincolnshire and beyond</p>
             </div>
-            <Link href="/gallery" className="text-teal-600 hover:text-teal-700 text-sm font-medium transition-colors">
+            <Link href="/gallery" className="text-amber-500 hover:text-amber-400 font-semibold text-sm">
               View all →
             </Link>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <PlaceholderImage label="Stainless conveyor" className="md:col-span-2 md:row-span-2" aspect="aspect-square" />
-            <PlaceholderImage label="Belt elevator" />
-            <PlaceholderImage label="Product washer" />
-            <PlaceholderImage label="Stainless tank" />
-            <PlaceholderImage label="Grading table" />
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <PlaceholderImage label="Commercial flat roof" aspect="aspect-[4/3]" />
+            <PlaceholderImage label="Mastic asphalt balcony" aspect="aspect-[4/3]" />
+            <PlaceholderImage label="Industrial roofing" aspect="aspect-[4/3]" />
+            <PlaceholderImage label="Domestic flat roof" aspect="aspect-[4/3]" />
+            <PlaceholderImage label="School roofing project" aspect="aspect-[4/3]" />
+            <PlaceholderImage label="Housing association roof" aspect="aspect-[4/3]" />
           </div>
         </div>
       </section>
 
-      {/* Why us */}
+      {/* Why choose us */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-6">
-              Why Choose Andy Pulling Engineering?
+            <h2 className="text-3xl font-black text-gray-900 mb-6">
+              The Only Mastic Asphalt Specialists Within 60 Miles
             </h2>
-            <ul className="space-y-4">
+            <p className="text-gray-500 leading-relaxed mb-6">
+              When most contractors reach for felt or single-ply, we offer something better. Mastic asphalt is one of the most durable flat roofing materials available — and we&apos;re the regional specialists for it.
+            </p>
+            <ul className="space-y-3">
               {[
-                ['Rapid response', "Short lead times and fast turnaround when you need it most."],
-                ['Engineers on call 7 days', "We're available whenever your production line needs us."],
-                ['Alterations & repairs', 'We work on existing machines, whether supplied by us or others.'],
-                ['Food-grade materials', 'All fabrications use materials suitable for food environments.'],
-                ['CAD-designed', 'Every piece is designed in CAD before fabrication begins.'],
-                ['Competitive pricing', 'Direct from manufacturer — no middlemen.'],
-              ].map(([title, desc]) => (
-                <li key={title} className="flex gap-4">
-                  <div className="flex-shrink-0 w-5 h-5 bg-teal-500 rounded-full flex items-center justify-center mt-0.5">
+                'Family business — four generations since 1959',
+                'Only mastic asphalt specialists within 60 miles',
+                'Domestic through to architect-specified commercial',
+                'Housing Associations, Local Authorities, NHS and schools',
+                'Full roofing, balcony and tanking solutions',
+                'Covering Lincolnshire, Cambridgeshire and Norfolk',
+              ].map((point) => (
+                <li key={point} className="flex gap-3 text-sm">
+                  <div className="flex-shrink-0 w-5 h-5 bg-amber-500 rounded-full flex items-center justify-center mt-0.5">
                     <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <div>
-                    <span className="text-gray-900 font-semibold text-sm">{title} — </span>
-                    <span className="text-gray-500 text-sm">{desc}</span>
-                  </div>
+                  <span className="text-gray-600">{point}</span>
                 </li>
               ))}
             </ul>
           </div>
-          <PlaceholderImage label="Workshop / team photo" aspect="aspect-[4/3]" />
+          <div className="grid grid-cols-2 gap-4">
+            <PlaceholderImage label="Asphalt work detail" aspect="aspect-square" />
+            <PlaceholderImage label="Roofing team" aspect="aspect-square" />
+            <PlaceholderImage label="Completed project" aspect="aspect-video" className="col-span-2" />
+          </div>
         </div>
       </section>
 
-      {/* CTA banner */}
-      <section className="bg-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 text-center">
-          <h2 className="text-2xl md:text-3xl font-black text-white mb-3">
-            Ready to discuss your requirements?
-          </h2>
-          <p className="text-slate-400 mb-6 text-sm">
-            We work closely with you to understand exactly what you need and design equipment specially for you.
-          </p>
+      {/* CTA */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="bg-stone-800 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <h2 className="text-2xl font-black text-white mb-2">Need a flat roof quotation?</h2>
+            <p className="text-stone-300 text-sm">
+              Call us on <a href="tel:01406362585" className="text-amber-400 hover:text-amber-300">01406 362585</a> or drop us a message and we&apos;ll get back to you promptly.
+            </p>
+          </div>
           <Link
             href="/contact"
-            className="inline-block bg-teal-500 hover:bg-teal-400 text-white font-bold px-8 py-3 rounded-lg transition-colors text-sm"
+            className="flex-shrink-0 bg-amber-500 hover:bg-amber-400 text-stone-900 font-bold px-8 py-3 rounded-lg transition-colors text-sm"
           >
-            Get in Touch Today
+            Get a Free Quote
           </Link>
         </div>
       </section>

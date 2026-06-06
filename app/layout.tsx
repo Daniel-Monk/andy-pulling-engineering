@@ -1,34 +1,33 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: {
-    default: "Andy Pulling Engineering | Food Processing Equipment Lincolnshire",
-    template: "%s | Andy Pulling Engineering",
+    default: "Wrights & Holbeach Asphalt | Flat Roofing Specialists | Lincolnshire",
+    template: "%s | Wrights & Holbeach Asphalt",
   },
   description:
-    "Specialists in custom stainless steel conveyors, fabrications and food processing equipment. Based in Gosberton, Lincolnshire. Engineers on call 7 days a week.",
+    "Flat roofing and mastic asphalt specialists serving Lincolnshire, Cambridgeshire and Norfolk since 1959. Four generations of family expertise in domestic, commercial and industrial roofing.",
   keywords: [
-    "food processing equipment Lincolnshire",
-    "stainless steel conveyors",
-    "custom fabrications Gosberton",
-    "food grade conveyor manufacturer",
-    "belt conveyors PE11",
+    "flat roofing Lincolnshire",
+    "mastic asphalt Spalding",
+    "flat roof Long Sutton",
+    "mastic asphalt specialists",
+    "flat roofing contractor Holbeach",
+    "flat roof Boston Lincolnshire",
+    "asphalt roofing Peterborough",
+    "flat roofing Kings Lynn",
   ],
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="h-full antialiased">
+    <html lang="en">
       <body className={`${inter.className} bg-white text-gray-900 flex flex-col min-h-screen`}>
         <Navbar />
         <main className="flex-1">{children}</main>
