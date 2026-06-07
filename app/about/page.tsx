@@ -16,10 +16,10 @@ const industries = [
 export default function AboutPage() {
   return (
     <>
-      <section className="bg-teal-700">
+      <section className="bg-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h1 className="text-4xl md:text-5xl font-black text-white mb-4">About Us</h1>
-          <p className="text-teal-100 text-lg max-w-2xl">
+          <p className="text-slate-300 text-lg max-w-2xl">
             Over 40 years of engineering experience, delivering custom equipment to the food and horticultural industries.
           </p>
         </div>
@@ -88,9 +88,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-teal-600 py-14 px-4 sm:px-6 lg:px-8 text-center">
+      <section className="bg-slate-800 py-14 px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-2xl font-black text-white mb-3">Ready to work together?</h2>
-        <p className="text-teal-100 text-sm mb-6">Get in touch to discuss your requirements — we&apos;d love to help.</p>
+        <p className="text-slate-300 text-sm mb-6">Get in touch to discuss your requirements — we&apos;d love to help.</p>
         <Link href="/contact" className="inline-block bg-white hover:bg-gray-100 text-teal-700 font-bold px-8 py-3 rounded-lg transition-colors text-sm">
           Contact Us
         </Link>

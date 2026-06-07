@@ -18,6 +18,8 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li><Link href="/services/conveyors" className="text-gray-400 hover:text-teal-400 transition-colors">Conveyors & Elevators</Link></li>
               <li><Link href="/services/fabrications" className="text-gray-400 hover:text-teal-400 transition-colors">Custom Fabrications</Link></li>
+              <li><Link href="/services/washers" className="text-gray-400 hover:text-teal-400 transition-colors">Washers & Washing Systems</Link></li>
+              <li><Link href="/services/racking" className="text-gray-400 hover:text-teal-400 transition-colors">Racking & Storage</Link></li>
               <li><Link href="/gallery" className="text-gray-400 hover:text-teal-400 transition-colors">Project Gallery</Link></li>
               <li><Link href="/about" className="text-gray-400 hover:text-teal-400 transition-colors">About Us</Link></li>
             </ul>

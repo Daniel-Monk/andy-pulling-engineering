@@ -75,32 +75,32 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-teal-700 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-teal-800 to-teal-600 pointer-events-none" />
+      <section className="relative bg-slate-800 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-700 pointer-events-none" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-6">
-              <span className="w-2 h-2 bg-white rounded-full animate-pulse" />
-              <span className="text-white/90 text-sm font-medium">Specialists to the Food Processing Industry</span>
+              <span className="w-2 h-2 bg-teal-400 rounded-full animate-pulse" />
+              <span className="text-slate-300 text-sm font-medium">Specialists to the Food Processing Industry</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-black text-white leading-tight mb-6">
               Custom Stainless Steel{' '}
-              <span className="text-teal-200">Conveyors & Fabrications</span>
+              <span className="text-teal-400">Conveyors & Fabrications</span>
             </h1>
-            <p className="text-teal-100 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
+            <p className="text-slate-300 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
               Individually designed and constructed equipment for the food, horticultural and materials handling industries.
               Based in Lincolnshire. Engineers on call 7 days a week.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/contact"
-                className="bg-white hover:bg-gray-100 text-teal-700 font-bold px-8 py-3 rounded-lg transition-colors text-sm"
+                className="bg-teal-500 hover:bg-teal-400 text-white font-bold px-8 py-3 rounded-lg transition-colors text-sm"
               >
                 Get a Free Quote
               </Link>
               <Link
                 href="/gallery"
-                className="border border-white/40 hover:border-white text-white font-medium px-8 py-3 rounded-lg transition-colors text-sm"
+                className="border border-white/30 hover:border-white text-slate-300 hover:text-white font-medium px-8 py-3 rounded-lg transition-colors text-sm"
               >
                 View Our Work
               </Link>
@@ -205,17 +205,17 @@ export default function Home() {
       </section>
 
       {/* CTA banner */}
-      <section className="bg-teal-600">
+      <section className="bg-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 text-center">
           <h2 className="text-2xl md:text-3xl font-black text-white mb-3">
             Ready to discuss your requirements?
           </h2>
-          <p className="text-teal-100 mb-6 text-sm">
+          <p className="text-slate-400 mb-6 text-sm">
             We work closely with you to understand exactly what you need and design equipment specially for you.
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-white hover:bg-gray-100 text-teal-700 font-bold px-8 py-3 rounded-lg transition-colors text-sm"
+            className="inline-block bg-teal-500 hover:bg-teal-400 text-white font-bold px-8 py-3 rounded-lg transition-colors text-sm"
           >
             Get in Touch Today
           </Link>

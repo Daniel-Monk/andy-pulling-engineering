@@ -37,11 +37,11 @@ const types = [
 export default function ConveyorsPage() {
   return (
     <>
-      <section className="bg-teal-700">
+      <section className="bg-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="text-teal-200 text-sm font-medium mb-3">Services</div>
+          <div className="text-slate-300 text-sm font-medium mb-3">Services</div>
           <h1 className="text-4xl md:text-5xl font-black text-white mb-4">Conveyors & Elevators</h1>
-          <p className="text-teal-100 text-lg max-w-2xl leading-relaxed">
+          <p className="text-slate-300 text-lg max-w-2xl leading-relaxed">
             Custom-designed stainless steel conveying solutions for food production, horticulture and materials handling. Every conveyor is built to your specification.
           </p>
         </div>
@@ -71,12 +71,12 @@ export default function ConveyorsPage() {
       </section>
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="bg-teal-600 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="bg-slate-800 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h2 className="text-2xl font-black text-white mb-2">Need a conveyor quote?</h2>
-            <p className="text-teal-100 text-sm">Tell us your layout, product and throughput requirements and we&apos;ll design a solution.</p>
+            <p className="text-slate-300 text-sm">Tell us your layout, product and throughput requirements and we&apos;ll design a solution.</p>
           </div>
-          <Link href="/contact" className="flex-shrink-0 bg-white hover:bg-gray-100 text-teal-700 font-bold px-8 py-3 rounded-lg transition-colors text-sm">
+          <Link href="/contact" className="flex-shrink-0 bg-teal-500 hover:bg-teal-400 text-white font-bold px-8 py-3 rounded-lg transition-colors text-sm">
             Get a Quote
           </Link>
         </div>

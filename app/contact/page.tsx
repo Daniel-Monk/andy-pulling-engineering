@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section className="bg-teal-700">
+      <section className="bg-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h1 className="text-4xl md:text-5xl font-black text-white mb-4">Get in Touch</h1>
-          <p className="text-teal-100 text-lg max-w-2xl">
+          <p className="text-slate-300 text-lg max-w-2xl">
             Tell us what you need and we&apos;ll get back to you promptly. Engineers on call 7 days a week.
           </p>
         </div>
