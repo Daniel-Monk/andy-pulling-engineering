@@ -44,9 +44,18 @@ This project deploys to [Vercel](https://vercel.com) automatically on every push
 2. Import at [vercel.com/new](https://vercel.com/new) — Vercel detects Next.js automatically
 3. Add the custom domain in Vercel's dashboard and update DNS
 
-### Contact form
+### Contact form (Resend)
 
-The form on \`/contact\` is ready to wire up to [Formspree](https://formspree.io/) — swap the form action for a Formspree endpoint, or add \`data-netlify="true"\` if deploying to Netlify instead.
+The contact form uses [Resend](https://resend.com) to send emails to `info@andypullingengineering.co.uk`.
+
+1. Sign up free at [resend.com](https://resend.com) and get an API key
+2. Add it as `RESEND_API_KEY` in Vercel's environment variables
+
+For local dev, create `.env.local`:
+
+```
+RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxx
+```
 
 ---
 
