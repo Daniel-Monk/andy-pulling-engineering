@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Andy Pulling Engineering
+
+Website redesign for Andy Pulling Engineering Ltd — a Lincolnshire-based manufacturer of custom stainless steel conveyors and food processing equipment, trading since 1982.
+
+## Overview
+
+The existing site dates from 2003: no mobile support, no navigation, no imagery, and effectively invisible on Google. This rebuild modernises the web presence with a focus on local SEO, mobile-first design, and making it easy for potential customers to get in touch.
+
+**Stack:** Next.js 15 · TypeScript · Tailwind CSS  
+**Hosting:** Vercel (free tier)  
+**Domain:** `andypullingengineering.co.uk` (existing, DNS pointed to Vercel)
+
+---
+
+## Pages
+
+| Route | Description |
+|---|---|
+| `/` | Homepage — hero, stats, services grid, gallery preview, CTA |
+| `/services/conveyors` | Belt, wire belt, Intralox conveyors and elevators |
+| `/services/fabrications` | Tanks, washers, tables, platforms, bespoke work |
+| `/gallery` | Full project photo gallery with category filters |
+| `/about` | Company history, industries served, key advantages |
+| `/contact` | Quote request form + full contact details |
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
-```bash
+\`\`\`bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+\`\`\`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deployment
 
-## Learn More
+This project deploys to [Vercel](https://vercel.com) automatically on every push to \`main\`.
 
-To learn more about Next.js, take a look at the following resources:
+1. Push this repo to GitHub
+2. Import at [vercel.com/new](https://vercel.com/new) — Vercel detects Next.js automatically
+3. Add the custom domain in Vercel's dashboard and update DNS
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Contact form
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The form on \`/contact\` is ready to wire up to [Formspree](https://formspree.io/) — swap the form action for a Formspree endpoint, or add \`data-netlify="true"\` if deploying to Netlify instead.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Replacing Placeholder Images
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+All grey placeholder boxes are rendered by \`components/PlaceholderImage.tsx\`. To swap in real photos:
+
+1. Drop images into \`/public/images/\`
+2. Replace \`<PlaceholderImage />\` with Next.js \`<Image>\` components:
+
+\`\`\`tsx
+import Image from 'next/image';
+
+<Image
+  src="/images/your-photo.jpg"
+  alt="Stainless steel belt conveyor"
+  width={800}
+  height={600}
+  className="rounded-lg object-cover w-full"
+/>
+\`\`\`
+
+Use descriptive \`alt\` text — it directly helps SEO.
+
+---
+
+## SEO Notes
+
+- Each page exports its own \`metadata\` object (title + description)
+- Target keywords are built into headings and copy, not stuffed into hidden footers
+- Add a [Google Business Profile](https://business.google.com) listing — free, and the biggest driver of local search traffic for a business like this
+- Once live, submit the sitemap to Google Search Console
+
+---
+
+## Project Structure
+
+\`\`\`
+├── app/
+│   ├── layout.tsx                  # Root layout — Navbar, Footer, global metadata
+│   ├── page.tsx                    # Homepage
+│   ├── about/page.tsx
+│   ├── gallery/page.tsx
+│   ├── contact/page.tsx
+│   └── services/
+│       ├── conveyors/page.tsx
+│       └── fabrications/page.tsx
+├── components/
+│   ├── Navbar.tsx                  # Sticky responsive nav with mobile menu
+│   ├── Footer.tsx                  # Footer with links and contact details
+│   └── PlaceholderImage.tsx        # Temporary placeholder until real photos arrive
+└── public/
+    └── images/                     # Drop real photos here
+\`\`\`
+
+---
+
+## Checklist Before Going Live
+
+- [ ] Replace all placeholder images with real photos
+- [ ] Verify fax number (01775 840167) is still in use
+- [ ] Confirm "7 days a week" availability is still accurate
+- [ ] Wire up contact form to a form handling service
+- [ ] Embed Google Map on contact page
+- [ ] Set up Google Business Profile
+- [ ] Submit to Google Search Console after launch
