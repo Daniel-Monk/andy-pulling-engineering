@@ -75,32 +75,32 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-gray-900 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-transparent to-transparent pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+      <section className="relative bg-teal-700 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-teal-800 to-teal-600 pointer-events-none" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-teal-900/40 border border-teal-700/40 rounded-full px-4 py-1.5 mb-6">
-              <span className="w-2 h-2 bg-teal-400 rounded-full animate-pulse" />
-              <span className="text-teal-300 text-sm font-medium">Specialists to the Food Processing Industry</span>
+            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-6">
+              <span className="w-2 h-2 bg-white rounded-full animate-pulse" />
+              <span className="text-white/90 text-sm font-medium">Specialists to the Food Processing Industry</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-black text-white leading-tight mb-6">
               Custom Stainless Steel{' '}
-              <span className="text-teal-400">Conveyors & Fabrications</span>
+              <span className="text-teal-200">Conveyors & Fabrications</span>
             </h1>
-            <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
+            <p className="text-teal-100 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
               Individually designed and constructed equipment for the food, horticultural and materials handling industries.
               Based in Lincolnshire. Engineers on call 7 days a week.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/contact"
-                className="bg-teal-500 hover:bg-teal-400 text-gray-900 font-bold px-8 py-3 rounded-lg transition-colors text-sm"
+                className="bg-white hover:bg-gray-100 text-teal-700 font-bold px-8 py-3 rounded-lg transition-colors text-sm"
               >
                 Get a Free Quote
               </Link>
               <Link
                 href="/gallery"
-                className="border border-gray-600 hover:border-teal-400 text-gray-300 hover:text-teal-400 font-medium px-8 py-3 rounded-lg transition-colors text-sm"
+                className="border border-white/40 hover:border-white text-white font-medium px-8 py-3 rounded-lg transition-colors text-sm"
               >
                 View Our Work
               </Link>
@@ -126,8 +126,8 @@ export default function Home() {
       {/* Services */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-black text-white mb-3">What We Build</h2>
-          <p className="text-gray-400 max-w-xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-3">What We Build</h2>
+          <p className="text-gray-500 max-w-xl mx-auto">
             All equipment is purpose-built to your exact requirements in food-grade stainless steel.
           </p>
         </div>
@@ -136,27 +136,27 @@ export default function Home() {
             <Link
               key={s.title}
               href={s.href}
-              className="group bg-gray-900 border border-gray-800 hover:border-teal-700 rounded-xl p-6 transition-all hover:-translate-y-1"
+              className="group bg-white border border-gray-200 hover:border-teal-400 rounded-xl p-6 transition-all hover:-translate-y-1 hover:shadow-md"
             >
-              <div className="text-teal-400 mb-4">{s.icon}</div>
-              <h3 className="text-white font-bold text-lg mb-2 group-hover:text-teal-400 transition-colors">
+              <div className="text-teal-600 mb-4">{s.icon}</div>
+              <h3 className="text-gray-900 font-bold text-lg mb-2 group-hover:text-teal-600 transition-colors">
                 {s.title}
               </h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{s.desc}</p>
+              <p className="text-gray-500 text-sm leading-relaxed">{s.desc}</p>
             </Link>
           ))}
         </div>
       </section>
 
       {/* Gallery preview */}
-      <section className="bg-gray-900 py-20 px-4 sm:px-6 lg:px-8">
+      <section className="bg-gray-50 py-20 px-4 sm:px-6 lg:px-8 border-y border-gray-200">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-end justify-between mb-8">
             <div>
-              <h2 className="text-3xl font-black text-white mb-2">Recent Work</h2>
-              <p className="text-gray-400 text-sm">A sample of our fabrications and installations</p>
+              <h2 className="text-3xl font-black text-gray-900 mb-2">Recent Work</h2>
+              <p className="text-gray-500 text-sm">A sample of our fabrications and installations</p>
             </div>
-            <Link href="/gallery" className="text-teal-400 hover:text-teal-300 text-sm font-medium transition-colors">
+            <Link href="/gallery" className="text-teal-600 hover:text-teal-700 text-sm font-medium transition-colors">
               View all →
             </Link>
           </div>
@@ -174,7 +174,7 @@ export default function Home() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-black text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-6">
               Why Choose Andy Pulling Engineering?
             </h2>
             <ul className="space-y-4">
@@ -188,13 +188,13 @@ export default function Home() {
               ].map(([title, desc]) => (
                 <li key={title} className="flex gap-4">
                   <div className="flex-shrink-0 w-5 h-5 bg-teal-500 rounded-full flex items-center justify-center mt-0.5">
-                    <svg className="w-3 h-3 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
                   <div>
-                    <span className="text-white font-semibold text-sm">{title} — </span>
-                    <span className="text-gray-400 text-sm">{desc}</span>
+                    <span className="text-gray-900 font-semibold text-sm">{title} — </span>
+                    <span className="text-gray-500 text-sm">{desc}</span>
                   </div>
                 </li>
               ))}
@@ -205,17 +205,17 @@ export default function Home() {
       </section>
 
       {/* CTA banner */}
-      <section className="bg-teal-500">
+      <section className="bg-teal-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 text-center">
-          <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-3">
+          <h2 className="text-2xl md:text-3xl font-black text-white mb-3">
             Ready to discuss your requirements?
           </h2>
-          <p className="text-teal-900 mb-6 text-sm">
+          <p className="text-teal-100 mb-6 text-sm">
             We work closely with you to understand exactly what you need and design equipment specially for you.
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-gray-900 hover:bg-gray-800 text-white font-bold px-8 py-3 rounded-lg transition-colors text-sm"
+            className="inline-block bg-white hover:bg-gray-100 text-teal-700 font-bold px-8 py-3 rounded-lg transition-colors text-sm"
           >
             Get in Touch Today
           </Link>
